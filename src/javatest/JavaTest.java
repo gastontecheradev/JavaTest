@@ -2,6 +2,7 @@ package javatest;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
+import java.util.Locale;
 
 public class JavaTest {
 
@@ -150,23 +151,21 @@ public class JavaTest {
         
         // Suma y promedio de salario
         
-        int[] sueldos = new int[4];
-        int suma = 0;
-        float promedio = 0;
-        
+        double[] sueldos = new double[4];
+        double suma = 0;
+        double promedio = 0;
+
         Scanner teclado = new Scanner(System.in);
-        
+        teclado.useLocale(Locale.US);
+
         for (int i = 0; i < sueldos.length; i++) {
             System.out.println("Ingrese el sueldo número " + (i + 1) + ": ");
-            sueldos[i] = teclado.nextInt();
+            sueldos[i] = teclado.nextDouble();
+            suma += sueldos[i];
         }
-        
-        for (int i = 0; i < sueldos.length; i++) {
-            suma = suma + sueldos[i];
-        }
-        
-        promedio = (float) suma / sueldos.length;
-        
+
+        promedio = suma / sueldos.length;
+
         System.out.println("Suma de todos los salarios: " + suma);
         System.out.println("Promedio de todos los salarios: " + promedio);
         
