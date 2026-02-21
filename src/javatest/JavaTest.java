@@ -151,7 +151,7 @@ public class JavaTest {
         
         // Suma y promedio de salario
         
-        double[] sueldos = new double[4];
+        /*double[] sueldos = new double[4];
         double suma = 0;
         double promedio = 0;
 
@@ -167,7 +167,43 @@ public class JavaTest {
         promedio = suma / sueldos.length;
 
         System.out.println("Suma de todos los salarios: " + suma);
-        System.out.println("Promedio de todos los salarios: " + promedio);
+        System.out.println("Promedio de todos los salarios: " + promedio);*/
+        
+        // Tabla de alumnos
+        
+        double[][] notas = new double[4][3];
+        double[] promedios = new double[4];
+        Scanner teclado = new Scanner(System.in);
+        
+        for (int f = 0; f < notas.length; f++) {
+            System.out.println("Ingrese las notas del alumno " + (f + 1) + ":");
+            for (int c = 0; c < notas[0].length; c++) {
+                notas[f][c] = teclado.nextDouble();
+            }
+        }
+        
+        double total;
+        
+        for (int f = 0; f < notas.length; f++) {
+            total = 0;
+            for (int c = 0; c < notas[0].length; c++) {
+                total = total + notas[f][c];
+            }
+            promedios[f] = total / notas[0].length;
+        }
+        
+        System.out.println("---------- PROMEDIOS ----------");
+        
+        for (int f = 0; f < notas.length; f++) {
+            System.out.println("Las notas del alumno número " + (f + 1) + " son: ");
+            for (int c = 0; c < notas[0].length; c++) {
+                System.out.println(notas[f][c]);
+            }
+            System.out.println("El promedio es de: " + promedios[f]);
+                    System.out.println("------------------------------");
+
+        }
+        
         
         
 
