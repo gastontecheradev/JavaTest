@@ -1,5 +1,6 @@
 package javatest;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class JavaTest {
@@ -26,21 +27,160 @@ public class JavaTest {
         }*/
         
         // Números en pantalla del 1 al 35
-        /*for (int i = 1; i <35; i++ ) {
-            System.out.println(i);
+        
+        /*for (int i = 0; i <35; i++ ) {
+            System.out.println(i+1);
         }*/
         
         // Números desde el 1 hasta el seleccionado por el usuario
-
-        // Solicitar número
         
-        int numero;
+        /*int numero;
+        boolean valido = false;
         
         Scanner teclado = new Scanner(System.in);
-        System.out.println("Ingrese el número límite");
-        numero = teclado.nextInt();
+
+        while (!valido) {
+            try {
+                System.out.print("Ingrese el número límite: ");
+                numero = teclado.nextInt();
+
+                for (int i = 1; i <= numero; i++) {
+                    System.out.println(i);
+                }
+                valido = true;
+            } catch (InputMismatchException e) {
+
+                System.out.println("Ingrese un formato de número correcto.");
+                teclado.nextLine();
+            }
+        }*/
         
-        System.out.println("Número: " + numero);
+        // Números del 200 al 250 saltando de 2 en 2
+        
+        /*for (int i = 198; i <= 248; i++) {
+            System.out.println(i + 2);
+        }*/
+        
+        // Cuenta regresiva de 10 a 1
+        
+        /*for (int i = 10; i >= 1; i--) {
+            System.out.println(i);
+        }*/
+        
+        // Mostrar palabras ingresadas hasta la palabra salir
+        
+        /*String palabra = "";
+        
+        Scanner teclado = new Scanner(System.in);
+        
+        while (!"salir".equalsIgnoreCase(palabra)) {
+            System.out.print("Ingrese una palabra: ");
+            palabra = teclado.nextLine();
+            
+            System.out.println(palabra);
+        }*/
+        
+        // Nombres en array
+        
+        /*Scanner teclado = new Scanner(System.in);
+        
+        String[] nombres = new String[8];
+        
+        for (int i =0; i < nombres.length; i++) {
+            System.out.print("Ingrese un nombre: ");
+            nombres[i] = teclado.nextLine();      
+        }
+        
+        for (int i = 0; i < nombres.length; i++) {
+            System.out.println(i + ". " + nombres[i]);
+        }*/
+        
+        
+        // Número mayor y menor de un array
+        
+        /*Scanner teclado = new Scanner(System.in);
+        int[] numeros = new int[10];
+
+        for (int i = 0; i < numeros.length; i++) {
+            System.out.println(i + ". Ingrese un número: ");
+            numeros[i] = teclado.nextInt();
+        }
+        int mayor = numeros[0];
+        int menor = numeros[0];
+
+        for (int i = 1; i < numeros.length; i++) {
+            if (numeros[i] > mayor) {
+                mayor = numeros[i];
+            }
+            
+            if (numeros[i] < menor) {
+                menor = numeros[i];
+            }
+        }
+
+        System.out.println("Mayor: " + mayor);
+        System.out.println("Menor: " + menor);*/
+        
+        // Contar cantidad de veces que se ingresa el número 3
+        
+        /*Scanner teclado = new Scanner(System.in);
+        int[] numeros = new int[5];
+        int contador = 0;
+
+        for (int i = 0; i < numeros.length; i++) {
+            System.out.print(i + 1 + ". Ingrese un número: ");
+            numeros[i] = teclado.nextInt();
+        }
+        
+        for (int numero : numeros) {
+            if (numero == 3) {
+                contador += 1;
+            }
+        }
+        
+      
+
+        if (contador == 0) {
+            System.out.println("El número no fue ingresado.");
+        } else if (contador == 1) {
+            System.out.println("El número 3 fue ingresado una vez.");
+        } else {
+            System.out.println("El número 3 fue ingresado " + contador + " veces.");
+        }*/
+        
+        // Suma y promedio de salario
+        
+        int[] sueldos = new int[4];
+        int suma = 0;
+        float promedio = 0;
+        
+        Scanner teclado = new Scanner(System.in);
+        
+        for (int i = 0; i < sueldos.length; i++) {
+            System.out.println("Ingrese el sueldo número " + (i + 1) + ": ");
+            sueldos[i] = teclado.nextInt();
+        }
+        
+        for (int i = 0; i < sueldos.length; i++) {
+            suma = suma + sueldos[i];
+        }
+        
+        promedio = (float) suma / sueldos.length;
+        
+        System.out.println("Suma de todos los salarios: " + suma);
+        System.out.println("Promedio de todos los salarios: " + promedio);
+        
+        
+
+
+        
+        
+        
+        
+        
+        
+        
+       
         
 
     }
