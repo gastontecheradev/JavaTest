@@ -171,7 +171,7 @@ public class JavaTest {
         
         // Tabla de alumnos
         
-        /*double[][] notas = new double[4][3];
+        double[][] notas = new double[4][3];
         double[] promedios = new double[4];
         Scanner teclado = new Scanner(System.in);
         
@@ -201,7 +201,7 @@ public class JavaTest {
             }
             System.out.println("El promedio es de: " + promedios[f]);
                     System.out.println("------------------------------");
-        }*/
+        }
         
         // Cantidad de paquetes de tienda
         
@@ -219,40 +219,57 @@ public class JavaTest {
             System.out.println("No se permiten compras inferiores a 5 productos");
         }*/
         
-
-        Scanner teclado = new Scanner(System.in);
-        int patente = 0;
+        // Costo de estacionamiento
+        
+        /*Scanner teclado = new Scanner(System.in);
+        String patente = "";
         int horas = 0;
         String tipo = "";
         String finalizar = "";
-        
-        
-        
+
         while (!"salir".equalsIgnoreCase(finalizar)) {
-            System.out.print("Ingrese la patente del vehículo: ");
-            patente = teclado.nextInt();
-            teclado.nextLine();
+            try {
+                do {
+                    System.out.print("Ingrese la patente del vehículo: ");
+                    patente = teclado.nextLine().toLowerCase();
 
-            System.out.print("Ingrese el tipo de estacionamiento: (por hora, media jornada, jornada completa)");
-            tipo = teclado.nextLine();
+                    if (patente.isEmpty()) {
+                        System.out.println("La patente no puede estar vacia");
+                    }
+                } while (patente.isEmpty());
 
-            if ("media jornada".equalsIgnoreCase(tipo)) {
-                System.out.println("La patente " + patente + " debe pagar 15 USD");
-                
-            } else if ("jornada completa".equalsIgnoreCase(tipo)) {
-                System.out.println("La patente " + patente + " debe pagar 30 USD");
-                
-            } else {
-                System.out.print("Ingrese la cantidad de horas: ");
-                horas = teclado.nextInt();
+                System.out.print("Ingrese el tipo de estacionamiento: (por hora, media jornada, jornada completa)");
+                tipo = teclado.nextLine().toLowerCase();
+
+                if ("media jornada".equals(tipo)) {
+                    System.out.println("La patente " + patente + " debe pagar 15 USD");
+
+                } else if ("jornada completa".equals(tipo)) {
+                    System.out.println("La patente " + patente + " debe pagar 30 USD");
+
+                } else if ("por hora".equals(tipo)) {
+                    System.out.print("Ingrese la cantidad de horas: ");
+                    horas = teclado.nextInt();
+                    teclado.nextLine();
+                    if (horas > 0) {
+                        System.out.println("La patente " + patente + " debe pagar " + (horas * 3) + " USD");
+
+                    } else {
+                        System.out.println("Ingrese una cantidad de horas correcta");
+                    }
+
+                } else {
+                    System.out.println("Ingrese una de las opciones correctas");
+                }
+
+            } catch (InputMismatchException e) {
+                System.out.println("Ingrese un valor en formato de número");
                 teclado.nextLine();
-                System.out.println("La patente " + patente + " debe pagar " + (horas * 3) + " USD");
             }
-            
+
             System.out.print("Escriba 'salir' para finalizar o cualquier otra tecla para continuar.");
             finalizar = teclado.nextLine();
-            
-        }
+        }*/
         
         
     }
