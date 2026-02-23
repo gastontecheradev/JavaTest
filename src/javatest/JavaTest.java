@@ -171,7 +171,7 @@ public class JavaTest {
         
         // Tabla de alumnos
         
-        double[][] notas = new double[4][3];
+        /*double[][] notas = new double[4][3];
         double[] promedios = new double[4];
         Scanner teclado = new Scanner(System.in);
         
@@ -201,7 +201,7 @@ public class JavaTest {
             }
             System.out.println("El promedio es de: " + promedios[f]);
                     System.out.println("------------------------------");
-        }
+        }*/
         
         // Cantidad de paquetes de tienda
         
